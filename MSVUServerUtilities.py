@@ -37,11 +37,11 @@ class MSVUServerUtilities:
 
     # Gets all dc datastream from objectstore
     s
-    def get_all_dc(self, table):
+    def get_all_dc(self):
         cursor = self.mu.conn.cursor()
-        statement = f"select pid from {table}"
+        statement = f"select pid from {self.namespace}"
         headers = 'pid', 'dublin_core'
-        csv_file_path = f"{self.staging_dir}/{table}_dc.csv"
+        csv_file_path = f"{self.staging_dir}/{self.namespace}_dc.csv"
         with open(csv_file_path, mode="w", newline="", encoding="utf-8") as file:
             writer = csv.DictWriter(file, fieldnames=headers)  # Pass the file object here
             writer.writeheader()
@@ -57,7 +57,7 @@ class MSVUServerUtilities:
                 dc = fw.get_dc()
                 writer.writerow({'pid': pid, 'dublin_core': dc})
 
-
+ms = MSVUServerUtilities('MSVU')
 
 
 
