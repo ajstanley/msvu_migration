@@ -248,6 +248,24 @@ class MSVUUtilities:
         result = cursor.execute(command).fetchone()
         return result['node_id'] if result is not None else ''
 
+    # Get key - value pairs from stored dublin core.
+    def get_dc_values(self, pid, table):
+        cursor = self.conn.cursor()
+        result = cursor.execute(f"select dublin_core from {table} where pid = '{pid}'")
+        dc = result.fetchone()['dublin_core']
+        root = ET.fromstring(dc)
+        namespaces = {
+            'dc': 'http://purl.org/dc/elements/1.1/'
+        }
+        tags_and_values = [(elem.tag, elem.text) for elem in root.findall('.//dc:*', namespaces)]
+        dc_vals = {}
+        for tag, value in tags_and_values:
+            tag = re.sub(r"\{.*?\}", "", tag)
+            dc_vals[tag] = value
+
+        return dc_vals
+    
+
 
 
 
