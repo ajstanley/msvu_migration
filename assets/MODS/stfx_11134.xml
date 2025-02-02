@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf8'?>
+<mods xmlns="http://www.loc.gov/mods/v3"
+>
+    <titleInfo>
+        <title>Academic Calendar, 2016-2017</title>
+    </titleInfo>
+    <name type="corporate">
+        <namePart>St. Francis Xavier University</namePart>
+    </name>
+    <identifier>2907</identifier>
+    <identifier>xfdr</identifier>
+    <typeOfResource>text</typeOfResource>
+    <language>
+        <languageTerm authority="iso639-2b" type="code">en</languageTerm>
+    </language>
+    <abstract>Academic calendar published by St. Francis Xavier University. This calendar includes an academic
+        timetable, admission procedures and requirements, general information, academic regulations, and information
+        regarding programs offered.
+    </abstract>
+    <originInfo>
+        <dateIssued>2016</dateIssued>
+        <publisher>St. Francis Xavier University</publisher>
+    </originInfo>
+    <physicalDescription>
+        <form authority="marcform">text</form>
+        <internetMediaType>application/pdf</internetMediaType>
+    </physicalDescription>
+    <subject>
+        <topic>St. Francis Xavier University -- Calendars</topic>
+        <hierarchicalGeographic>
+            <continent>North America</continent>
+            <country>Canada</country>
+            <province>Nova Scotia</province>
+            <county>Antigonish</county>
+            <city>Antigonish</city>
+        </hierarchicalGeographic>
+        <cartographics>
+            <coordinates>45.6225, -61.9922</coordinates>
+        </cartographics>
+    </subject>
+    <location>
+        <physicalLocation>Print copy held at the StFX University Archives, Angus L. Macdonald Library</physicalLocation>
+    </location>
+    <accessCondition type="use and reproduction">Permission granted by St. Francis Xavier University to add digital
+        calendar to repository. http://creativecommons.org/licenses/by-nc-nd/2.5/ca
+    </accessCondition>
+</mods>

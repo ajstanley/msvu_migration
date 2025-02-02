@@ -1,10 +1,12 @@
 # Utility class for functions to be run on the server
+import shutil
 
 import FoxmlWorker as FW
 import MSVUUtilities as MU
 from pathlib import Path
 from urllib.parse import unquote
 import csv
+
 
 class MSVUServerUtilities:
     def __init__(self, namespace):
@@ -13,6 +15,22 @@ class MSVUServerUtilities:
         self.datastreamStore = '/home/alan/data/datastreamStore'
         self.staging_dir = 'staging'
         self.mu = MU.MSVUUtilities()
+        self.mimemap = {"image/jpeg": ".jpg",
+                        "image/jp2": ".jp2",
+                        "image/png": ".png",
+                        "image/tiff": ".tif",
+                        "text/xml": ".xml",
+                        "text/plain": ".txt",
+                        "application/pdf": ".pdf",
+                        "application/xml": ".xml",
+                        "audio/x-wav": ".wav",
+                        "application/vnd.openxmlformats-officedocument.wordprocessingml.document": ".docx",
+                        "application/octet-stream": ".bib",
+                        "audio/mpeg": ".mp3",
+                        "video/mp4": ".mp4",
+                        "video/x-m4v": ".m4v",
+                        "audio/vnd.wave": '.wav'
+                        }
 
 
     # Retrieves FOXml object store with pid
@@ -36,7 +54,6 @@ class MSVUServerUtilities:
         return pids
 
     # Gets all dc datastream from objectstore
-    s
     def get_all_dc(self):
         cursor = self.mu.conn.cursor()
         statement = f"select pid from {self.namespace}"
@@ -57,7 +74,27 @@ class MSVUServerUtilities:
                 dc = fw.get_dc()
                 writer.writerow({'pid': pid, 'dublin_core': dc})
 
+    def stage_files(self, pids, datastreams):
+        for pid in pids:
+            nid = self.mu.get_nid_from_pid(pid)
+            fw = self.get_foxml_from_pid(pid)
+            all_files = fw.get_file_data()
+            for datastream in datastreams:
+                if datastream in all_files:
+                    file_info = all_files[datastream]['filename']
+                    source = self.mu.dereference(file_info['filename'])
+                    extension = self.mimemap[file_info['mimetype']]
+                    destination = f"{self.staging_dir}{pid.replace(':', '_')}_{datastream}{extension}"
+                    shutil.copy(source, destination)
+
+
+
+
+
+
+
 ms = MSVUServerUtilities('MSVU')
+ms.get_all_dc()
 
 
 

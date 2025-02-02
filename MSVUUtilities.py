@@ -5,6 +5,8 @@ import hashlib
 import sqlite3
 import urllib
 import urllib.parse
+import lxml.etree as ET
+import re
 
 import ModsTransformer as MT
 
@@ -142,6 +144,31 @@ class MSVUUtilities:
         command = f"Select * from {table} where content_model = 'islandora:pageCModel'"
         return self.get_details(command)
 
+    # Gets all documents in repository
+    def get_document_details(self, table):
+        command = f"Select * from {table} where content_model = 'islandora:sp_pdf'"
+        return self.get_details(command)
+
+    # Gets all basic_images in repository
+    def get_basic_image_details(self, table):
+        command = f"Select * from {table} where content_model = 'islandora:sp_basic_image'"
+        return self.get_details(command)
+
+    # Gets all large images in repository
+    def get_large_image_details(self, table):
+        command = f"Select * from {table} where content_model = 'islandora:sp_large_image_cmodel'"
+        return self.get_details(command)
+
+    # Gets all audio in repository
+    def get_audio_details(self, table):
+        command = f"Select * from {table} where content_model = 'islandora:sp-audioCModel'"
+        return self.get_details(command)
+
+    # Gets all audio in repository
+    def get_newspaper_details(self, table):
+        command = f"Select * from {table} where content_model = 'islandora:newspaperIssueCModel'"
+        return self.get_details(command)
+
     # Utility function to prepare database selections for workbenchl
     def get_details(self, command):
         cursor = self.conn.cursor()
@@ -162,6 +189,8 @@ class MSVUUtilities:
             'pid': 'field_pid',
             'collection_pid': 'field_member_of',
             'page_of': 'field_member_of',
+            'sequence': 'field_weight',
+
         }
         content_map = {
             'islandora:collectionCModel': 'collection',
@@ -264,13 +293,9 @@ class MSVUUtilities:
             dc_vals[tag] = value
 
         return dc_vals
-    
-
-
 
 
 if __name__ == '__main__':
     MU = MSVUUtilities()
 
     MU.add_node_ids('msvu', 'inputs/nid-pid.csv')
-

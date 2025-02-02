@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:etd="http://www.ndltd.org/standards/metadata/etdms/1.0"
+>
+    <name type="personal">
+        <role>
+            <roleTerm authority="local" type="text">author</roleTerm>
+        </role>
+        <namePart type="given">Kumar</namePart>
+        <namePart type="family">Dudett</namePart>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="local" type="text">author</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="local" type="text">Thesis advisor</roleTerm>
+        </role>
+        <namePart type="given">JoAnne</namePart>
+        <namePart type="family">MacDonald</namePart>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="local" type="text">Thesis advisor</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="local" type="text">Supervisory Committee Member</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="local" type="text">Examination Committee Member</roleTerm>
+        </role>
+        <namePart type="given">Joanne</namePart>
+        <namePart type="family">Tompkins</namePart>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="local" type="text">Examination Committee Member</roleTerm>
+        </role>
+        <namePart type="given">David</namePart>
+        <namePart type="family">Young</namePart>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="local" type="text">Examination Committee Member</roleTerm>
+        </role>
+    </name>
+    <identifier type="department">Education</identifier>
+    <typeOfResource>text</typeOfResource>
+    <genre>Dissertation/Thesis</genre>
+    <titleInfo>
+        <title>Factors that influence performance on the Canadian National Council Licensure Examination for Registered
+            Nurses (NCLEX-RN®)
+        </title>
+    </titleInfo>
+    <originInfo>
+        <publisher>St. Francis Xavier University</publisher>
+        <place>
+            <placeTerm type="text">Antigonish, NS</placeTerm>
+        </place>
+        <dateIssued keyDate="yes">2019</dateIssued>
+        <issuance>monographic</issuance>
+    </originInfo>
+    <language>
+        <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+    </language>
+    <physicalDescription>
+        <form authority="marcform">electronic</form>
+        <internetMediaType>application/pdf</internetMediaType>
+    </physicalDescription>
+    <extension>
+        <etd:degree>
+            <etd:name>Master of Education</etd:name>
+            <etd:level>Master</etd:level>
+            <etd:discipline>Faculty of Education. Education.</etd:discipline>
+            <etd:grantor>St. Francis Xavier University</etd:grantor>
+        </etd:degree>
+    </extension>
+    <accessCondition type="use and reproduction" displayLabel="License">Contact Author</accessCondition>
+    <physicalDescription authority="local">OTHER</physicalDescription>
+</mods>

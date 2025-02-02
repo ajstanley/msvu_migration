@@ -306,12 +306,59 @@ class ModsTransformer:
         }
 
     def fix_dates(self, key):
-        date = self.summary[key]
+        months = {
+            "January": "01", "February": "02", "March": "03", "April": "04",
+            "May": "05", "June": "06", "July": "07", "August": "08",
+            "September": "09", "October": "10", "November": "11", "December": "12"
+        }
+        mistakes = {
+            '8 Feb 1990': '1990-02-08',
+            'Sept 1993': '1993-09',
+            'Winter 2005': '2005-24',
+            'November. 2008': '2008-11',
+            'Between 1949 and 1965': '1949-1965',
+            'Between 1953 and 1966': '1953-1966',
+            '[before 1970]': '-1970'
+
+        }
+        date = self.summary[key].strip()
         if date is None:
             return
-        if edtf_validate.valid_edtf.is_valid(date):
-            self.summary[key] = date
+        if date in mistakes:
+            date = mistakes[date]
+        date = date.replace(';', '').replace(',', '')
+
+        # Test for January 1973
+        match = re.search(r'(\w+)\s+(\d{4})', date)
+        if match:
+            month_str, year = match.groups()
+            month_map = {
+                "January": "01", "February": "02", "March": "03",
+                "April": "04", "May": "05", "June": "06",
+                "July": "07", "August": "08", "September": "09",
+                "October": "10", "November": "11", "December": "12"
+            }
+            month = month_map.get(month_str, "??")  # Handle unknown months gracefully
+            self.summary[key] = f"{year}-{month}"
             return
+
+        # Test for Jan 1999
+        match = re.match(r"([A-Za-z]+),?\s*(\d{4})", date)
+        if match:
+            month_name, year = match.groups()
+            month_number = months.get(month_name)  # Convert month name to number
+            if month_number:
+                return f"{year}-{month_number}"
+        # Test for November-December, 2010
+        match = re.match(r"([A-Za-z]+)-([A-Za-z]+),?\s*(\d{4})", date)
+        if match:
+            month1, month2, year = match.groups()
+            month1_num = months.get(month1)
+            month2_num = months.get(month2)
+            if month1_num and month2_num:
+                return f"{year}-{month1_num}/{year}-{month2_num}"
+
+        # Test for 1982-83
         pattern = r"\b(18|19|20)\d{2}-(\d{2})\b"
         if re.match(pattern, date):
             years = date.split('-')
@@ -320,12 +367,19 @@ class ModsTransformer:
                 century = '20'
             self.summary[key] = f"{years[0]}/{century}{years[1]}"
             return
+        # Test for February 27, 2010
         pattern = r"^(January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2},\s?\d{4}$"
         if re.match(pattern, date):
-            date = re.sub(r",(\S+)", r", \1", date)
-            date_object = datetime.strptime(date, "%B %d, %Y")
-            self.summary[key] = date_object.strftime("%Y-%m-%d")
-            return
+            try:
+                if date == 'February 29, 1990':
+                    date = 'February 28, 1990'
+                date = re.sub(r",(\S+)", r", \1", date)
+                date_object = datetime.strptime(date, "%B %d, %Y")
+                self.summary[key] = date_object.strftime("%Y-%m-%d")
+                return
+            except ValueError as e:
+                print(f"Error parsing date: '{date}'. Ensure it follows 'Month day, Year' format. ({e})")
+                return
         pattern = r"\d{4}-\d{4}"
         if re.match(pattern, date):
             self.summary[key] = date.replace('-', '/')
@@ -333,11 +387,15 @@ class ModsTransformer:
         if 'ca.' in date:
             self.summary[key] = f"{date.split()[-1]}~"
             return
+        if edtf_validate.valid_edtf.is_valid(date):
+            self.summary[key] = date
+            return
 
         print(f"{date} could not be made EDTF compliant")
 
     def parse_name(self, input):
         role = name = ''
+        outputs = []
         vocab = 'corporate_body'
         type_map = {
             'corporate': 'corporate_body',
@@ -350,12 +408,18 @@ class ModsTransformer:
             if key == 'namePart':
                 name = value
             if key == 'role' and not isinstance(value, str):
+                if isinstance(value, list) and isinstance(value[0], dict):
+                    value = value[0]
+                else:
+                    value = {}
+
                 roleTerm = value.get('roleTerm', {})
                 if isinstance(roleTerm, str):
                     role = roleTerm.capitalize()
                 else:
                     role = value.get('roleTerm', {}).get('#text', '').capitalize()
-        retval = f"{self.relator_map[role]}:{vocab}:{name}"
+        if role not in self.relator_map:
+            role = 'Editor'
         return f"{self.relator_map[role]}:{vocab}:{name}"
 
     def extract_from_mods(self, mods):
@@ -365,7 +429,7 @@ class ModsTransformer:
         string_keys = [key for key, value in mods.items() if isinstance(value, str) and not key.startswith("@")]
         all_keys = [key for key, value in mods.items() if not key.startswith("@")]
         ignored = [item for item in all_keys if item not in self.to_harvest]
-        print(f"ignored- {ignored}")
+        #   print(f"ignored- {ignored}")
         # Process simple string values.
         for key in string_keys:
             self.summary[self.fields[key]] = ' '.join(mods[key].splitlines())
@@ -377,7 +441,6 @@ class ModsTransformer:
         for originInfo in mods.get('originInfo', []):
             for key, value in originInfo.items():
                 self.summary[self.fields[key]] = value
-
 
         # Subject info
         for key, value in mods.get('subject', {}).items():
@@ -408,15 +471,20 @@ class ModsTransformer:
             if title.get('@type', '') == 'alternative':
                 if title.get('title') is not None:
                     self.summary['field_alternative_title'] = title.get('title')
-
+        # Location.
+        if isinstance(mods.get('location'), dict):
+            mods['location'] = [mods['location']]
+        locations = []
+        for location in mods.get('location', {}):
+            locations.append((location or {}).get('location', {}).get('physicalLocation', ''))
+            self.summary['field_location'] = '|'.join(locations)
         self.summary['field_physical_description'] = (
             mods.get('physicalDescription', {})
             .get('form', {})
             .get('#text', '')
         )
         self.summary['field_extent'] = mods.get('physicalDescription', {}).get('extent', '')
-        self.summary['field_resource_type'] = mods.get('typeOfResource', {}).get('#text', '')
-        self.summary['field_location'] = mods.get('location',{}).get('physicalLocation','')
+        self.summary['field_resource_type'] = (mods.get('typeOfResource') or {}).get('#text', '')
         if isinstance(mods.get('name'), dict):
             mods['name'] = [mods['name']]
         names = []
@@ -427,6 +495,5 @@ class ModsTransformer:
         for key in self.summary:
             if 'edtf' in key:
                 self.fix_dates(key)
-
 
         return self.summary

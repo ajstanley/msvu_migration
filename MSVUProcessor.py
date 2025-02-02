@@ -44,7 +44,7 @@ class MSVUProcessor:
         self.fieldnames = ['id', 'title', 'parent_id', 'field_member_of', 'field_edtf_date_issued', 'field_abstract',
                            'field_genre', 'field_subject', 'field_geographic_subject', 'field_physical_description',
                            'field_extent', 'field_resource_type', 'field_linked_agent', 'field_pid',
-                           'field_related_item', 'field_edtf_date_other', 'field_edtf_copyright_data', 'field_issuance',
+                           'field_related_item', 'field_edtf_date_other', 'field_edtf_copyright_date', 'field_issuance',
                            'field_location', 'field_publisher', 'field_edition', 'field_access_condition',
                            'field_model', 'field_edtf_date_created', 'file', 'field_subtitle', 'field_identifier',
                            'field_alternative_title']
@@ -117,6 +117,38 @@ class MSVUProcessor:
             writer.writeheader()
             for detail in details:
                 mods = self.mu.extract_from_mods(detail['field_pid'])
+                dc = self.mu.get_dc_values(detail['field_pid'], self.namespace)
+                row = mods | detail
+                node_id = self.mu.get_nid_from_pid('msvu', row['field_member_of'])
+                row['id'] = row['field_pid']
+                if 'title' not in row:
+                    row['title'] = dc['title']
+                if node_id:
+                    row['field_member_of'] = node_id
+                    writer.writerow(row)
+    def prepare_document_worksheet(self, output_file):
+        details = self.mu.get_document_details('msvu')
+        with open(output_file, 'w', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=self.fieldnames)
+            writer.writeheader()
+            for detail in details:
+                mods = self.mu.extract_from_mods(detail['field_pid'])
+                row = mods | detail
+                node_id = self.mu.get_nid_from_pid('msvu', row['field_member_of'])
+                row['id'] = row['field_pid']
+                dc = self.mu.get_dc_values(detail['field_pid'], self.namespace)
+                if 'title' not in row:
+                    row['title'] = dc['title']
+                if node_id:
+                    row['field_member_of'] = node_id
+                    writer.writerow(row)
+    def prepare_images_worksheet(self, output_file):
+        details = self.mu.get_basic_image_details('msvu')
+        with open(output_file, 'w', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=self.fieldnames)
+            writer.writeheader()
+            for detail in details:
+                mods = self.mu.extract_from_mods(detail['field_pid'])
                 row = mods | detail
                 node_id = self.mu.get_nid_from_pid('msvu', row['field_member_of'])
                 row['id'] = row['field_pid']
@@ -124,7 +156,38 @@ class MSVUProcessor:
                     row['field_member_of'] = node_id
                     writer.writerow(row)
 
+    def prepare_audio_worksheet(self, output_file):
+        details = self.mu.get_audio_details('msvu')
+        with open(output_file, 'w', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=self.fieldnames)
+            writer.writeheader()
+            for detail in details:
+                mods = self.mu.extract_from_mods(detail['field_pid'])
+                row = mods | detail
+                node_id = self.mu.get_nid_from_pid('msvu', row['field_member_of'])
+                row['id'] = row['field_pid']
+                if node_id:
+                    row['field_member_of'] = node_id
+                    writer.writerow(row)
+
+    def prepare_newspaper_worksheet(self, output_file):
+        details = self.mu.get_newspaper_details('msvu')
+        with open(output_file, 'w', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=self.fieldnames)
+            writer.writeheader()
+            for detail in details:
+                mods = self.mu.extract_from_mods(detail['field_pid'])
+                row = mods | detail
+                node_id = self.mu.get_nid_from_pid('msvu', row['field_member_of'])
+                row['id'] = row['field_pid']
+                dc = self.mu.get_dc_values(detail['field_pid'], self.namespace)
+                if 'title' not in row:
+                    row['title'] = dc['title']
+                if node_id:
+                    row['field_member_of'] = node_id
+                    writer.writerow(row)
+
 
 MP = MSVUProcessor('msvu')
 
-MP.prepare_page_worksheet('workbench_sheets/pages.csv')
+MP.prepare_document_worksheet('workbench_sheets/documents.csv')

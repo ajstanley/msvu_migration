@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foxml:digitalObject VERSION="1.1" PID="umir:306"
+xmlns:foxml="info:fedora/fedora-system:def/foxml#"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd">
+<foxml:objectProperties>
+<foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="Active"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#label" VALUE="effet du programme d&apos;intervention précoce du Moncton Head Start sur les aptitudes intellectuelles et le rendement académique des participants de la cohorte 1990-1995"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#ownerId" VALUE="kmacphail"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#createdDate" VALUE="2021-06-25T17:12:53.254Z"/>
+<foxml:property NAME="info:fedora/fedora-system:def/view#lastModifiedDate" VALUE="2024-01-19T17:05:04.681Z"/>
+</foxml:objectProperties>
+<foxml:datastream ID="AUDIT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="false">
+<foxml:datastreamVersion ID="AUDIT.0" LABEL="Audit Trail for this object" CREATED="2021-06-25T17:12:53.254Z" MIMETYPE="text/xml" FORMAT_URI="info:fedora/fedora-system:format/xml.fedora.audit">
+<foxml:xmlContent>
+<audit:auditTrail xmlns:audit="info:fedora/fedora-system:def/audit#">
+<audit:record ID="AUDREC1">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>MODS</audit:componentID>
+<audit:responsibility>jboudreau</audit:responsibility>
+<audit:date>2022-09-27T11:31:08.712Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC2">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DC</audit:componentID>
+<audit:responsibility>jboudreau</audit:responsibility>
+<audit:date>2022-09-27T11:31:08.954Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC3">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>MODS</audit:componentID>
+<audit:responsibility>jboudreau</audit:responsibility>
+<audit:date>2022-09-27T11:36:14.007Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC4">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DC</audit:componentID>
+<audit:responsibility>jboudreau</audit:responsibility>
+<audit:date>2022-09-27T11:36:14.106Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC5">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>MODS</audit:componentID>
+<audit:responsibility>jboudreau</audit:responsibility>
+<audit:date>2022-09-27T14:39:24.864Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC6">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DC</audit:componentID>
+<audit:responsibility>jboudreau</audit:responsibility>
+<audit:date>2022-09-27T14:39:24.963Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC7">
+<audit:process type="Fedora API-M"/>
+<audit:action>addDatastream</audit:action>
+<audit:componentID>PDF</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2022-12-13T14:46:21.037Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC8">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>MODS</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2022-12-13T14:46:21.154Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC9">
+<audit:process type="Fedora API-M"/>
+<audit:action>addDatastream</audit:action>
+<audit:componentID>FULL_TEXT</audit:componentID>
+<audit:responsibility>fedoraAdmin</audit:responsibility>
+<audit:date>2022-12-13T14:46:26.954Z</audit:date>
+<audit:justification>Copied datastream from umir:306.</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC10">
+<audit:process type="Fedora API-M"/>
+<audit:action>addDatastream</audit:action>
+<audit:componentID>TECHMD</audit:componentID>
+<audit:responsibility>fedoraAdmin</audit:responsibility>
+<audit:date>2022-12-13T14:46:28.718Z</audit:date>
+<audit:justification>Copied datastream from umir:306.</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC11">
+<audit:process type="Fedora API-M"/>
+<audit:action>addDatastream</audit:action>
+<audit:componentID>TN</audit:componentID>
+<audit:responsibility>fedoraAdmin</audit:responsibility>
+<audit:date>2022-12-13T14:46:31.976Z</audit:date>
+<audit:justification>Copied datastream from umir:306.</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC12">
+<audit:process type="Fedora API-M"/>
+<audit:action>addDatastream</audit:action>
+<audit:componentID>PREVIEW</audit:componentID>
+<audit:responsibility>fedoraAdmin</audit:responsibility>
+<audit:date>2022-12-13T14:46:37.527Z</audit:date>
+<audit:justification>Copied datastream from umir:306.</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC13">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>MODS</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2022-12-13T14:47:19.759Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC14">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DC</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2022-12-13T14:47:19.808Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC15">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>MODS</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2022-12-13T14:48:47.482Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC16">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DC</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2022-12-13T14:48:47.539Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC17">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>MODS</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2022-12-13T14:57:20.290Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC18">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DC</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2022-12-13T14:57:20.351Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC19">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>MODS</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2023-03-17T14:23:31.237Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC20">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DC</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2023-03-17T14:23:31.344Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC21">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>MODS</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2024-01-19T17:03:53.753Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC22">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DC</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2024-01-19T17:03:55.825Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC23">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByReference</audit:action>
+<audit:componentID>MODS</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2024-01-19T17:05:04.486Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+<audit:record ID="AUDREC24">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DC</audit:componentID>
+<audit:responsibility>rgaudet</audit:responsibility>
+<audit:date>2024-01-19T17:05:04.681Z</audit:date>
+<audit:justification></audit:justification>
+</audit:record>
+</audit:auditTrail>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="RELS-EXT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="RELS-EXT.0" LABEL="Fedora Object to Object Relationship Metadata." CREATED="2021-06-25T17:12:53.254Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="595">
+<foxml:xmlContent>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:fedora="info:fedora/fedora-system:def/relations-external#" xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:islandora="http://islandora.ca/ontology/relsext#">
+  <rdf:Description rdf:about="info:fedora/umir:306">
+    <fedora:isMemberOfCollection rdf:resource="info:fedora/umir:theses"></fedora:isMemberOfCollection>
+    <fedora-model:hasModel rdf:resource="info:fedora/ir:thesisCModel"></fedora-model:hasModel>
+    <islandora:deferDerivatives>true</islandora:deferDerivatives>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="MODS" STATE="A" CONTROL_GROUP="M" VERSIONABLE="true">
+<foxml:datastreamVersion ID="MODS.0" LABEL="MODS Record" CREATED="2021-06-25T17:12:53.254Z" MIMETYPE="application/xml" SIZE="4396">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+MODS+MODS.0"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="MODS.1" LABEL="MODS Record" CREATED="2022-09-27T11:31:08.712Z" MIMETYPE="application/xml" SIZE="4257">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+MODS+MODS.1"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="MODS.2" LABEL="MODS Record" CREATED="2022-09-27T11:36:14.007Z" MIMETYPE="application/xml" SIZE="4209">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+MODS+MODS.2"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="MODS.3" LABEL="MODS Record" CREATED="2022-09-27T14:39:24.864Z" MIMETYPE="application/xml" SIZE="5395">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+MODS+MODS.3"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="MODS.4" LABEL="MODS Record" CREATED="2022-12-13T14:46:21.154Z" MIMETYPE="application/xml" SIZE="5545">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+MODS+MODS.4"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="MODS.5" LABEL="MODS Record" CREATED="2022-12-13T14:47:19.759Z" MIMETYPE="application/xml" SIZE="5738">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+MODS+MODS.5"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="MODS.6" LABEL="MODS Record" CREATED="2022-12-13T14:48:47.482Z" MIMETYPE="application/xml" SIZE="5743">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+MODS+MODS.6"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="MODS.7" LABEL="MODS Record" CREATED="2022-12-13T14:57:20.290Z" MIMETYPE="application/xml" SIZE="5743">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+MODS+MODS.7"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="MODS.8" LABEL="MODS Record" CREATED="2023-03-17T14:23:31.237Z" MIMETYPE="application/xml" SIZE="5746">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+MODS+MODS.8"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="MODS.9" LABEL="MODS Record" CREATED="2024-01-19T17:03:53.753Z" MIMETYPE="application/xml" SIZE="5751">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+MODS+MODS.9"/>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="MODS.10" LABEL="MODS Record" CREATED="2024-01-19T17:05:04.486Z" MIMETYPE="application/xml" SIZE="5751">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+MODS+MODS.10"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="DC.0" LABEL="DC Record" CREATED="2021-06-25T17:12:53.254Z" MIMETYPE="application/xml" SIZE="2869">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>L&apos;  effet du programme d&apos;intervention précoce du Moncton Head Start sur les aptitudes intellectuelles et le rendement académique des participants de la cohorte 1990-1995</dc:title>
+  <dc:subject>ÉvaluationMoncton Head Start</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Succès scolaire</dc:subject>
+  <dc:subject>Succès scolaire--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Enfants d&apos;âge préscolaire, Services aux</dc:subject>
+  <dc:subject>Enfants d&apos;âge préscolaire, Services aux--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Niveau intellectuel--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Enseignement préscolaire</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Enseignement préscolaire--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:description>Par Manon Porelle. --</dc:description>
+  <dc:description>Thèse (M.A. Psychologie) -- Université de Moncton, Faculté des sciences sociales, 2000.</dc:description>
+  <dc:description>Bibliogr.: f. 43-45.</dc:description>
+  <dc:description>Également disponible sur microfiches et en version électronique.</dc:description>
+  <dc:description>http://proxy.cm.umoncton.ca/login?url=https://search.proquest.com/docview/304675430?accountid=14592</dc:description>
+  <dc:publisher>Département de psychologie, Faculté des sciences sociales, Université de Moncton</dc:publisher>
+  <dc:contributor>Porelle Manon , 1976- (auteur)</dc:contributor>
+  <dc:contributor>Cormier, Pierre (directeur de thèse)</dc:contributor>
+  <dc:date>2000</dc:date>
+  <dc:type>Text</dc:type>
+  <dc:type>thèse</dc:type>
+  <dc:format>print</dc:format>
+  <dc:format>45 f.</dc:format>
+  <dc:identifier>umir:306</dc:identifier>
+  <dc:identifier>isbn: 0494106395</dc:identifier>
+  <dc:identifier>oclc: 726412592</dc:identifier>
+  <dc:language>fre</dc:language>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DC.1" LABEL="DC Record" CREATED="2022-09-27T11:31:08.954Z" MIMETYPE="application/xml" SIZE="2379">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>L&apos;  effet du programme d&apos;intervention précoce du Moncton Head Start sur les aptitudes intellectuelles et le rendement académique des participants de la cohorte 1990-1995</dc:title>
+  <dc:subject>ÉvaluationMoncton Head Start</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Succès scolaire</dc:subject>
+  <dc:subject>Enfants d&apos;âge préscolaire, Services aux</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Enseignement préscolaire</dc:subject>
+  <dc:description>Par Manon Porelle. --</dc:description>
+  <dc:description>Thèse (M.A. Psychologie) -- Université de Moncton, Faculté des sciences sociales, 2000.</dc:description>
+  <dc:description>Bibliogr.: f. 43-45.</dc:description>
+  <dc:description>Également disponible sur microfiches et en version électronique.</dc:description>
+  <dc:description>http://proxy.cm.umoncton.ca/login?url=https://search.proquest.com/docview/304675430?accountid=14592</dc:description>
+  <dc:publisher>Université de Moncton</dc:publisher>
+  <dc:contributor>Porelle Manon (auteur)</dc:contributor>
+  <dc:contributor>(directeur de thèse)</dc:contributor>
+  <dc:contributor>Cormier, Pierre (direction de thèse)</dc:contributor>
+  <dc:date>2000</dc:date>
+  <dc:type>Text</dc:type>
+  <dc:type>thèse</dc:type>
+  <dc:format>print</dc:format>
+  <dc:format>45</dc:format>
+  <dc:format>application/pdf</dc:format>
+  <dc:identifier>umir:306</dc:identifier>
+  <dc:identifier>isbn: 0494106395</dc:identifier>
+  <dc:identifier>oclc: 726412592</dc:identifier>
+  <dc:identifier>faculté: Faculté des sciences sociales (1980-2001)</dc:identifier>
+  <dc:identifier>department: École de psychologie</dc:identifier>
+  <dc:identifier>campus: Campus de Moncton</dc:identifier>
+  <dc:language>fre</dc:language>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DC.2" LABEL="DC Record" CREATED="2022-09-27T11:36:14.106Z" MIMETYPE="application/xml" SIZE="2349">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>L&apos;  effet du programme d&apos;intervention précoce du Moncton Head Start sur les aptitudes intellectuelles et le rendement académique des participants de la cohorte 1990-1995</dc:title>
+  <dc:subject>ÉvaluationMoncton Head Start</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Succès scolaire</dc:subject>
+  <dc:subject>Enfants d&apos;âge préscolaire, Services aux</dc:subject>
+  <dc:subject>Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Enseignement préscolaire</dc:subject>
+  <dc:description>Par Manon Porelle. --</dc:description>
+  <dc:description>Thèse (M.A. Psychologie) -- Université de Moncton, Faculté des sciences sociales, 2000.</dc:description>
+  <dc:description>Bibliogr.: f. 43-45.</dc:description>
+  <dc:description>Également disponible sur microfiches et en version électronique.</dc:description>
+  <dc:description>http://proxy.cm.umoncton.ca/login?url=https://search.proquest.com/docview/304675430?accountid=14592</dc:description>
+  <dc:publisher>Université de Moncton</dc:publisher>
+  <dc:contributor>Porelle Manon (auteur)</dc:contributor>
+  <dc:contributor>(directeur de thèse)</dc:contributor>
+  <dc:contributor>Cormier, Pierre (direction de thèse)</dc:contributor>
+  <dc:date>2000</dc:date>
+  <dc:type>Text</dc:type>
+  <dc:type>thèse</dc:type>
+  <dc:format>print</dc:format>
+  <dc:format>45</dc:format>
+  <dc:format>application/pdf</dc:format>
+  <dc:identifier>umir:306</dc:identifier>
+  <dc:identifier>isbn: 0494106395</dc:identifier>
+  <dc:identifier>oclc: 726412592</dc:identifier>
+  <dc:identifier>faculté: Faculté des sciences sociales (1980-2001)</dc:identifier>
+  <dc:identifier>department: École de psychologie</dc:identifier>
+  <dc:identifier>campus: Campus de Moncton</dc:identifier>
+  <dc:language>fre</dc:language>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DC.3" LABEL="DC Record" CREATED="2022-09-27T14:39:24.963Z" MIMETYPE="application/xml" SIZE="3602">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>L&apos;  effet du programme d&apos;intervention précoce du Moncton Head Start sur les aptitudes intellectuelles et le rendement académique des participants de la cohorte 1990-1995</dc:title>
+  <dc:subject>ÉvaluationMoncton Head Start</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Succès scolaire</dc:subject>
+  <dc:subject>Enfants d&apos;âge préscolaire, Services aux</dc:subject>
+  <dc:subject>Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Enseignement préscolaire</dc:subject>
+  <dc:description>Par Manon Porelle. --</dc:description>
+  <dc:description>Thèse (M.A. Psychologie) -- Université de Moncton, Faculté des sciences sociales, 2000.</dc:description>
+  <dc:description>Bibliogr.: f. 43-45.</dc:description>
+  <dc:description>Également disponible sur microfiches et en version électronique.</dc:description>
+  <dc:description>http://proxy.cm.umoncton.ca/login?url=https://search.proquest.com/docview/304675430?accountid=14592</dc:description>
+  <dc:description>Les aptitudes intellectuelles et le rendement académique des participants des années 1990 à 1995 au programme d&apos;intervention précoce du Moncton Head Start sont évalués afin de documenter les effets à moyen terme de ce programme. Dix-sept anciens participants (10 garçons et 7 filles) au programme composent le groupe expérimental alors que 10 garçons et 7 filles qui vivaient des difficultés financières semblables aux participants du Moncton Head Start à l&apos;âge d&apos;entrée dans le programme mais n&apos;ayant reçu aucun service forment le groupe témoin. Les groupes sont pairés sur les variables sexe, âge et revenu familial mensuel. L&apos;évaluation des aptitudes intellectuelles est faite à l&apos;aide du VMI et K-BIT alors que le Canada Quiet sert à l&apos;évaluation du rendement académique des participants. Aucune différence significative entre les deux groupes au niveau des aptitudes intellectuelles et du rendement académique n&apos;est trouvée. L&apos;élaboration d&apos;un plan expérimental plutôt que quasi-expérimental et l&apos;appariement des groupes sur des variables environnementales sont suggérées en tant que procédures pour des recherches futures.</dc:description>
+  <dc:publisher>Université de Moncton</dc:publisher>
+  <dc:contributor>Porelle Manon (auteur)</dc:contributor>
+  <dc:contributor>(directeur de thèse)</dc:contributor>
+  <dc:contributor>Cormier, Pierre (direction de thèse)</dc:contributor>
+  <dc:date>2000</dc:date>
+  <dc:type>Text</dc:type>
+  <dc:type>thèse</dc:type>
+  <dc:format>print</dc:format>
+  <dc:format>45</dc:format>
+  <dc:format>application/pdf</dc:format>
+  <dc:identifier>umir:306</dc:identifier>
+  <dc:identifier>isbn: 0494106395</dc:identifier>
+  <dc:identifier>oclc: 726412592</dc:identifier>
+  <dc:identifier>faculté: Faculté des sciences sociales (1980-2001)</dc:identifier>
+  <dc:identifier>department: École de psychologie</dc:identifier>
+  <dc:identifier>campus: Campus de Moncton</dc:identifier>
+  <dc:language>fre</dc:language>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DC.4" LABEL="DC Record" CREATED="2022-12-13T14:47:19.808Z" MIMETYPE="application/xml" SIZE="3814">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>L&apos;  effet du programme d&apos;intervention précoce du Moncton Head Start sur les aptitudes intellectuelles et le rendement académique des participants de la cohorte 1990-1995</dc:title>
+  <dc:subject>ÉvaluationMoncton Head Start</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Succès scolaire</dc:subject>
+  <dc:subject>Enfants d&apos;âge préscolaire, Services aux</dc:subject>
+  <dc:subject>Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Enseignement préscolaire</dc:subject>
+  <dc:description>Par Manon Porelle. --</dc:description>
+  <dc:description>Thèse (M.A. Psychologie) -- Université de Moncton, Faculté des sciences sociales, 2000.</dc:description>
+  <dc:description>Bibliogr.: f. 43-45.</dc:description>
+  <dc:description>Également disponible sur microfiches et en version électronique.</dc:description>
+  <dc:description>http://proxy.cm.umoncton.ca/login?url=https://search.proquest.com/docview/304675430?accountid=14592</dc:description>
+  <dc:description>Les aptitudes intellectuelles et le rendement académique des participants des années 1990 à 1995 au programme d&apos;intervention précoce du Moncton Head Start sont évalués afin de documenter les effets à moyen terme de ce programme. Dix-sept anciens participants (10 garçons et 7 filles) au programme composent le groupe expérimental alors que 10 garçons et 7 filles qui vivaient des difficultés financières semblables aux participants du Moncton Head Start à l&apos;âge d&apos;entrée dans le programme mais n&apos;ayant reçu aucun service forment le groupe témoin. Les groupes sont pairés sur les variables sexe, âge et revenu familial mensuel. L&apos;évaluation des aptitudes intellectuelles est faite à l&apos;aide du VMI et K-BIT alors que le Canada Quiet sert à l&apos;évaluation du rendement académique des participants. Aucune différence significative entre les deux groupes au niveau des aptitudes intellectuelles et du rendement académique n&apos;est trouvée. L&apos;élaboration d&apos;un plan expérimental plutôt que quasi-expérimental et l&apos;appariement des groupes sur des variables environnementales sont suggérées en tant que procédures pour des recherches futures.</dc:description>
+  <dc:publisher>Université de Moncton</dc:publisher>
+  <dc:contributor>Porelle Manon (auteur)</dc:contributor>
+  <dc:contributor>(directeur de thèse)</dc:contributor>
+  <dc:contributor>Cormier, Pierre (direction de thèse)</dc:contributor>
+  <dc:date>2000</dc:date>
+  <dc:type>Text</dc:type>
+  <dc:type>thèse</dc:type>
+  <dc:format>print</dc:format>
+  <dc:format>45</dc:format>
+  <dc:format>application/pdf</dc:format>
+  <dc:identifier>umir:306</dc:identifier>
+  <dc:identifier>isbn: 0494106395</dc:identifier>
+  <dc:identifier>oclc: 726412592</dc:identifier>
+  <dc:identifier>faculté: Faculté des sciences sociales (1980-2001)</dc:identifier>
+  <dc:identifier>department: École de psychologie</dc:identifier>
+  <dc:identifier>campus: Campus de Moncton</dc:identifier>
+  <dc:identifier>https://udmscholar.cairnrepo.org/en/islandora/object/umir:306/datastream/PDF/download/citation.pdf</dc:identifier>
+  <dc:identifier>lac: UMIR-306</dc:identifier>
+  <dc:language>fre</dc:language>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+  <dc:rights>Author</dc:rights>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DC.5" LABEL="DC Record" CREATED="2022-12-13T14:48:47.539Z" MIMETYPE="application/xml" SIZE="3819">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>L&apos;  effet du programme d&apos;intervention précoce du Moncton Head Start sur les aptitudes intellectuelles et le rendement académique des participants de la cohorte 1990-1995</dc:title>
+  <dc:subject>ÉvaluationMoncton Head Start</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Succès scolaire</dc:subject>
+  <dc:subject>Enfants d&apos;âge préscolaire, Services aux</dc:subject>
+  <dc:subject>Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Enseignement préscolaire</dc:subject>
+  <dc:description>Par Manon Porelle. --</dc:description>
+  <dc:description>Thèse (M.A. Psychologie) -- Université de Moncton, Faculté des sciences sociales, 2000.</dc:description>
+  <dc:description>Bibliogr.: f. 43-45.</dc:description>
+  <dc:description>Également disponible sur microfiches et en version électronique.</dc:description>
+  <dc:description>http://proxy.cm.umoncton.ca/login?url=https://search.proquest.com/docview/304675430?accountid=14592</dc:description>
+  <dc:description>Les aptitudes intellectuelles et le rendement académique des participants des années 1990 à 1995 au programme d&apos;intervention précoce du Moncton Head Start sont évalués afin de documenter les effets à moyen terme de ce programme. Dix-sept anciens participants (10 garçons et 7 filles) au programme composent le groupe expérimental alors que 10 garçons et 7 filles qui vivaient des difficultés financières semblables aux participants du Moncton Head Start à l&apos;âge d&apos;entrée dans le programme mais n&apos;ayant reçu aucun service forment le groupe témoin. Les groupes sont pairés sur les variables sexe, âge et revenu familial mensuel. L&apos;évaluation des aptitudes intellectuelles est faite à l&apos;aide du VMI et K-BIT alors que le Canada Quiet sert à l&apos;évaluation du rendement académique des participants. Aucune différence significative entre les deux groupes au niveau des aptitudes intellectuelles et du rendement académique n&apos;est trouvée. L&apos;élaboration d&apos;un plan expérimental plutôt que quasi-expérimental et l&apos;appariement des groupes sur des variables environnementales sont suggérées en tant que procédures pour des recherches futures.</dc:description>
+  <dc:publisher>Université de Moncton</dc:publisher>
+  <dc:contributor>Porelle Manon (auteur)</dc:contributor>
+  <dc:contributor>(directeur de thèse)</dc:contributor>
+  <dc:contributor>Cormier, Pierre (direction de thèse)</dc:contributor>
+  <dc:date>2000</dc:date>
+  <dc:type>Text</dc:type>
+  <dc:type>thèse</dc:type>
+  <dc:format>electronic</dc:format>
+  <dc:format>45</dc:format>
+  <dc:format>application/pdf</dc:format>
+  <dc:identifier>umir:306</dc:identifier>
+  <dc:identifier>isbn: 0494106395</dc:identifier>
+  <dc:identifier>oclc: 726412592</dc:identifier>
+  <dc:identifier>faculté: Faculté des sciences sociales (1980-2001)</dc:identifier>
+  <dc:identifier>department: École de psychologie</dc:identifier>
+  <dc:identifier>campus: Campus de Moncton</dc:identifier>
+  <dc:identifier>https://udmscholar.cairnrepo.org/en/islandora/object/umir:306/datastream/PDF/download/citation.pdf</dc:identifier>
+  <dc:identifier>lac: UMIR-306</dc:identifier>
+  <dc:language>fre</dc:language>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+  <dc:rights>Author</dc:rights>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DC.6" LABEL="DC Record" CREATED="2022-12-13T14:57:20.351Z" MIMETYPE="application/xml" SIZE="3819">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>L&apos;  effet du programme d&apos;intervention précoce du Moncton Head Start sur les aptitudes intellectuelles et le rendement académique des participants de la cohorte 1990-1995</dc:title>
+  <dc:subject>ÉvaluationMoncton Head Start</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Succès scolaire</dc:subject>
+  <dc:subject>Enfants d&apos;âge préscolaire, Services aux</dc:subject>
+  <dc:subject>Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Enseignement préscolaire</dc:subject>
+  <dc:description>Par Manon Porelle. --</dc:description>
+  <dc:description>Thèse (M.A. Psychologie) -- Université de Moncton, Faculté des sciences sociales, 2000.</dc:description>
+  <dc:description>Bibliogr.: f. 43-45.</dc:description>
+  <dc:description>Également disponible sur microfiches et en version électronique.</dc:description>
+  <dc:description>http://proxy.cm.umoncton.ca/login?url=https://search.proquest.com/docview/304675430?accountid=14592</dc:description>
+  <dc:description>Les aptitudes intellectuelles et le rendement académique des participants des années 1990 à 1995 au programme d&apos;intervention précoce du Moncton Head Start sont évalués afin de documenter les effets à moyen terme de ce programme. Dix-sept anciens participants (10 garçons et 7 filles) au programme composent le groupe expérimental alors que 10 garçons et 7 filles qui vivaient des difficultés financières semblables aux participants du Moncton Head Start à l&apos;âge d&apos;entrée dans le programme mais n&apos;ayant reçu aucun service forment le groupe témoin. Les groupes sont pairés sur les variables sexe, âge et revenu familial mensuel. L&apos;évaluation des aptitudes intellectuelles est faite à l&apos;aide du VMI et K-BIT alors que le Canada Quiet sert à l&apos;évaluation du rendement académique des participants. Aucune différence significative entre les deux groupes au niveau des aptitudes intellectuelles et du rendement académique n&apos;est trouvée. L&apos;élaboration d&apos;un plan expérimental plutôt que quasi-expérimental et l&apos;appariement des groupes sur des variables environnementales sont suggérées en tant que procédures pour des recherches futures.</dc:description>
+  <dc:publisher>Université de Moncton</dc:publisher>
+  <dc:contributor>Porelle Manon (auteur)</dc:contributor>
+  <dc:contributor>(directeur de thèse)</dc:contributor>
+  <dc:contributor>Cormier, Pierre (direction de thèse)</dc:contributor>
+  <dc:date>2000</dc:date>
+  <dc:type>Text</dc:type>
+  <dc:type>thèse</dc:type>
+  <dc:format>electronic</dc:format>
+  <dc:format>45</dc:format>
+  <dc:format>application/pdf</dc:format>
+  <dc:identifier>umir:306</dc:identifier>
+  <dc:identifier>isbn: 0494106395</dc:identifier>
+  <dc:identifier>oclc: 726412592</dc:identifier>
+  <dc:identifier>faculté: Faculté des sciences sociales (1980-2001)</dc:identifier>
+  <dc:identifier>department: École de psychologie</dc:identifier>
+  <dc:identifier>campus: Campus de Moncton</dc:identifier>
+  <dc:identifier>https://udmscholar.cairnrepo.org/en/islandora/object/umir:306/datastream/PDF/download/citation.pdf</dc:identifier>
+  <dc:identifier>lac: UMIR-306</dc:identifier>
+  <dc:language>fre</dc:language>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+  <dc:rights>Author</dc:rights>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DC.7" LABEL="DC Record" CREATED="2023-03-17T14:23:31.344Z" MIMETYPE="application/xml" SIZE="3834">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>L&apos;  effet du programme d&apos;intervention précoce du Moncton Head Start sur les aptitudes intellectuelles et le rendement académique des participants de la cohorte 1990-1995</dc:title>
+  <dc:subject>ÉvaluationMoncton Head Start</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Succès scolaire</dc:subject>
+  <dc:subject>Enfants d&apos;âge préscolaire, Services aux</dc:subject>
+  <dc:subject>Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants handicapés sociaux--Enseignement préscolaire</dc:subject>
+  <dc:description>Par Manon Porelle. --</dc:description>
+  <dc:description>Thèse (M.A. Psychologie) -- Université de Moncton, Faculté des sciences sociales, 2000.</dc:description>
+  <dc:description>Bibliogr.: f. 43-45.</dc:description>
+  <dc:description>Également disponible sur microfiches et en version électronique.</dc:description>
+  <dc:description>http://proxy.cm.umoncton.ca/login?url=https://search.proquest.com/docview/304675430?accountid=14592</dc:description>
+  <dc:description>Les aptitudes intellectuelles et le rendement académique des participants des années 1990 à 1995 au programme d&apos;intervention précoce du Moncton Head Start sont évalués afin de documenter les effets à moyen terme de ce programme. Dix-sept anciens participants (10 garçons et 7 filles) au programme composent le groupe expérimental alors que 10 garçons et 7 filles qui vivaient des difficultés financières semblables aux participants du Moncton Head Start à l&apos;âge d&apos;entrée dans le programme mais n&apos;ayant reçu aucun service forment le groupe témoin. Les groupes sont pairés sur les variables sexe, âge et revenu familial mensuel. L&apos;évaluation des aptitudes intellectuelles est faite à l&apos;aide du VMI et K-BIT alors que le Canada Quiet sert à l&apos;évaluation du rendement académique des participants. Aucune différence significative entre les deux groupes au niveau des aptitudes intellectuelles et du rendement académique n&apos;est trouvée. L&apos;élaboration d&apos;un plan expérimental plutôt que quasi-expérimental et l&apos;appariement des groupes sur des variables environnementales sont suggérées en tant que procédures pour des recherches futures.</dc:description>
+  <dc:publisher>Université de Moncton</dc:publisher>
+  <dc:contributor>Porelle Manon (auteur)</dc:contributor>
+  <dc:contributor>(directeur de thèse)</dc:contributor>
+  <dc:contributor>Cormier, Pierre (direction de thèse)</dc:contributor>
+  <dc:date>2000</dc:date>
+  <dc:type>Text</dc:type>
+  <dc:type>thèse</dc:type>
+  <dc:format>electronic</dc:format>
+  <dc:format>45</dc:format>
+  <dc:format>application/pdf</dc:format>
+  <dc:identifier>umir:306</dc:identifier>
+  <dc:identifier>isbn: 0494106395</dc:identifier>
+  <dc:identifier>oclc: 726412592</dc:identifier>
+  <dc:identifier>faculté: Faculté des sciences sociales (1980-2001)</dc:identifier>
+  <dc:identifier>department: Psychologie (1967-1968 à 2000-2001)</dc:identifier>
+  <dc:identifier>campus: Campus de Moncton</dc:identifier>
+  <dc:identifier>https://udmscholar.cairnrepo.org/en/islandora/object/umir:306/datastream/PDF/download/citation.pdf</dc:identifier>
+  <dc:identifier>lac: UMIR-306</dc:identifier>
+  <dc:language>fre</dc:language>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+  <dc:rights>Author</dc:rights>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DC.8" LABEL="DC Record" CREATED="2024-01-19T17:03:55.825Z" MIMETYPE="application/xml" SIZE="3839">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>L&apos;  effet du programme d&apos;intervention précoce du Moncton Head Start sur les aptitudes intellectuelles et le rendement académique des participants de la cohorte 1990-1995</dc:title>
+  <dc:subject>ÉvaluationMoncton Head Start</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Succès scolaire</dc:subject>
+  <dc:subject>Enfants d&apos;âge préscolaire, Services aux</dc:subject>
+  <dc:subject>Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants socialement défavorisés--Enseignement préscolaire</dc:subject>
+  <dc:description>Par Manon Porelle. --</dc:description>
+  <dc:description>Thèse (M.A. Psychologie) -- Université de Moncton, Faculté des sciences sociales, 2000.</dc:description>
+  <dc:description>Bibliogr.: f. 43-45.</dc:description>
+  <dc:description>Également disponible sur microfiches et en version électronique.</dc:description>
+  <dc:description>http://proxy.cm.umoncton.ca/login?url=https://search.proquest.com/docview/304675430?accountid=14592</dc:description>
+  <dc:description>Les aptitudes intellectuelles et le rendement académique des participants des années 1990 à 1995 au programme d&apos;intervention précoce du Moncton Head Start sont évalués afin de documenter les effets à moyen terme de ce programme. Dix-sept anciens participants (10 garçons et 7 filles) au programme composent le groupe expérimental alors que 10 garçons et 7 filles qui vivaient des difficultés financières semblables aux participants du Moncton Head Start à l&apos;âge d&apos;entrée dans le programme mais n&apos;ayant reçu aucun service forment le groupe témoin. Les groupes sont pairés sur les variables sexe, âge et revenu familial mensuel. L&apos;évaluation des aptitudes intellectuelles est faite à l&apos;aide du VMI et K-BIT alors que le Canada Quiet sert à l&apos;évaluation du rendement académique des participants. Aucune différence significative entre les deux groupes au niveau des aptitudes intellectuelles et du rendement académique n&apos;est trouvée. L&apos;élaboration d&apos;un plan expérimental plutôt que quasi-expérimental et l&apos;appariement des groupes sur des variables environnementales sont suggérées en tant que procédures pour des recherches futures.</dc:description>
+  <dc:publisher>Université de Moncton</dc:publisher>
+  <dc:contributor>Porelle Manon (auteur)</dc:contributor>
+  <dc:contributor>(directeur de thèse)</dc:contributor>
+  <dc:contributor>Cormier, Pierre (direction de thèse)</dc:contributor>
+  <dc:date>2000</dc:date>
+  <dc:type>Text</dc:type>
+  <dc:type>thèse</dc:type>
+  <dc:format>electronic</dc:format>
+  <dc:format>45</dc:format>
+  <dc:format>application/pdf</dc:format>
+  <dc:identifier>umir:306</dc:identifier>
+  <dc:identifier>isbn: 0494106395</dc:identifier>
+  <dc:identifier>oclc: 726412592</dc:identifier>
+  <dc:identifier>faculté: Faculté des sciences sociales (1980-2001)</dc:identifier>
+  <dc:identifier>department: Psychologie (1967-1968 à 2000-2001)</dc:identifier>
+  <dc:identifier>campus: Campus de Moncton</dc:identifier>
+  <dc:identifier>https://udmscholar.cairnrepo.org/en/islandora/object/umir:306/datastream/PDF/download/citation.pdf</dc:identifier>
+  <dc:identifier>lac: UMIR-306</dc:identifier>
+  <dc:language>fre</dc:language>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+  <dc:rights>Author</dc:rights>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DC.9" LABEL="DC Record" CREATED="2024-01-19T17:05:04.681Z" MIMETYPE="application/xml" SIZE="3770">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>L'  effet du programme d'intervention précoce du Moncton Head Start sur les aptitudes intellectuelles et le rendement académique des participants de la cohorte 1990-1995</dc:title>
+  <dc:subject>ÉvaluationMoncton Head Start</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants pauvres--Niveau intellectuel--Nouveau-Brunswick--Moncton</dc:subject>
+  <dc:subject>Succès scolaire</dc:subject>
+  <dc:subject>Enfants d'âge préscolaire, Services aux</dc:subject>
+  <dc:subject>Niveau intellectuel</dc:subject>
+  <dc:subject>Enfants socialement défavorisés--Enseignement préscolaire</dc:subject>
+  <dc:description>Par Manon Porelle. --</dc:description>
+  <dc:description>Thèse (M.A. Psychologie) -- Université de Moncton, Faculté des sciences sociales, 2000.</dc:description>
+  <dc:description>Bibliogr.: f. 43-45.</dc:description>
+  <dc:description>Également disponible sur microfiches et en version électronique.</dc:description>
+  <dc:description>http://proxy.cm.umoncton.ca/login?url=https://search.proquest.com/docview/304675430?accountid=14592</dc:description>
+  <dc:description>Les aptitudes intellectuelles et le rendement académique des participants des années 1990 à 1995 au programme d'intervention précoce du Moncton Head Start sont évalués afin de documenter les effets à moyen terme de ce programme. Dix-sept anciens participants (10 garçons et 7 filles) au programme composent le groupe expérimental alors que 10 garçons et 7 filles qui vivaient des difficultés financières semblables aux participants du Moncton Head Start à l'âge d'entrée dans le programme mais n'ayant reçu aucun service forment le groupe témoin. Les groupes sont pairés sur les variables sexe, âge et revenu familial mensuel. L'évaluation des aptitudes intellectuelles est faite à l'aide du VMI et K-BIT alors que le Canada Quiet sert à l'évaluation du rendement académique des participants. Aucune différence significative entre les deux groupes au niveau des aptitudes intellectuelles et du rendement académique n'est trouvée. L'élaboration d'un plan expérimental plutôt que quasi-expérimental et l'appariement des groupes sur des variables environnementales sont suggérées en tant que procédures pour des recherches futures.</dc:description>
+  <dc:publisher>Université de Moncton</dc:publisher>
+  <dc:contributor>Porelle Manon (auteur)</dc:contributor>
+  <dc:contributor>(directeur de thèse)</dc:contributor>
+  <dc:contributor>Cormier, Pierre (direction de thèse)</dc:contributor>
+  <dc:date>2000</dc:date>
+  <dc:type>Text</dc:type>
+  <dc:type>thèse</dc:type>
+  <dc:format>electronic</dc:format>
+  <dc:format>45</dc:format>
+  <dc:format>application/pdf</dc:format>
+  <dc:identifier>umir:306</dc:identifier>
+  <dc:identifier>isbn: 0494106395</dc:identifier>
+  <dc:identifier>oclc: 726412592</dc:identifier>
+  <dc:identifier>faculté: Faculté des sciences sociales (1980-2001)</dc:identifier>
+  <dc:identifier>department: Psychologie (1967-1968 à 2000-2001)</dc:identifier>
+  <dc:identifier>campus: Campus de Moncton</dc:identifier>
+  <dc:identifier>https://udmscholar.cairnrepo.org/en/islandora/object/umir:306/datastream/PDF/download/citation.pdf</dc:identifier>
+  <dc:identifier>lac: UMIR-306</dc:identifier>
+  <dc:language>fre</dc:language>
+  <dc:coverage>Nouveau-Brunswick</dc:coverage>
+  <dc:coverage>Moncton</dc:coverage>
+  <dc:rights>Author</dc:rights>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="PDF" STATE="A" CONTROL_GROUP="M" VERSIONABLE="true">
+<foxml:datastreamVersion ID="PDF.0" LABEL="PDF Datastream" CREATED="2022-12-13T14:46:21.037Z" MIMETYPE="application/pdf" SIZE="2550207">
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+PDF+PDF.0"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="FULL_TEXT" STATE="A" CONTROL_GROUP="M" VERSIONABLE="false">
+<foxml:datastreamVersion ID="FULL_TEXT.0" LABEL="FULL_TEXT" CREATED="2022-12-13T14:46:26.954Z" MIMETYPE="text/plain" SIZE="97286">
+<foxml:contentDigest TYPE="MD5" DIGEST="8a969263371936c69454c9c0ad1031ca"/>
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+FULL_TEXT+FULL_TEXT.0"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="TECHMD" STATE="A" CONTROL_GROUP="M" VERSIONABLE="false">
+<foxml:datastreamVersion ID="TECHMD.0" LABEL="TECHMD" CREATED="2022-12-13T14:46:28.718Z" MIMETYPE="text/xml" SIZE="3157">
+<foxml:contentDigest TYPE="MD5" DIGEST="b526324d9266d2e4b9299b489feb66d4"/>
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+TECHMD+TECHMD.0"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="TN" STATE="A" CONTROL_GROUP="M" VERSIONABLE="false">
+<foxml:datastreamVersion ID="TN.0" LABEL="TN" CREATED="2022-12-13T14:46:31.976Z" MIMETYPE="image/jpeg" SIZE="6456">
+<foxml:contentDigest TYPE="MD5" DIGEST="b13e46ebe68eb7b4312eea201534717d"/>
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+TN+TN.0"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="PREVIEW" STATE="A" CONTROL_GROUP="M" VERSIONABLE="false">
+<foxml:datastreamVersion ID="PREVIEW.0" LABEL="PREVIEW" CREATED="2022-12-13T14:46:37.527Z" MIMETYPE="image/jpeg" SIZE="31495">
+<foxml:contentDigest TYPE="MD5" DIGEST="a0535e84da791f4ca775d6773747e49b"/>
+<foxml:contentLocation TYPE="INTERNAL_ID" REF="umir:306+PREVIEW+PREVIEW.0"/>
+</foxml:datastreamVersion>
+</foxml:datastream>
+</foxml:digitalObject>
