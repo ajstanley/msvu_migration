@@ -5,6 +5,7 @@ import time
 
 import FoxmlWorker as FW
 import MSVUUtilities as MU
+import MSVUServerUtilities as MS
 
 
 class MSVUProcessor:
@@ -23,6 +24,7 @@ class MSVUProcessor:
             'islandora:sp-audioCModel': ['OBJ'],
         }
         self.mu = MU.MSVUUtilities()
+        self.ms = MS.MSVUServerUtilities()
         self.namespace = namespace
         self.export_dir = '/opt/islandora/msvu_migration'
         self.mimemap = {"image/jpeg": ".jpg",
@@ -186,8 +188,14 @@ class MSVUProcessor:
                 if node_id:
                     row['field_member_of'] = node_id
                     writer.writerow(row)
+    def stage_collection_thumbnails(self):
+        collections = self.mu.get_collection_details('msvu')
+        collection_pids = [d["field_pid"] for d in collections]
+        self.ms.stage_files(collection_pids, ['TN'])
+
+
 
 
 MP = MSVUProcessor('msvu')
 
-MP.prepare_document_worksheet('workbench_sheets/documents.csv')
+MP.stage_collection_thumbnails()

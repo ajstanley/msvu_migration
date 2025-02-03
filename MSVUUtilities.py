@@ -23,7 +23,8 @@ class MSVUUtilities:
                          'hasModel': 'content_model',
                          'isPageOf': 'page_of',
                          'isSequenceNumber': 'sequence',
-                         'isConstituentOf': 'constituent_of'
+                         'isConstituentOf': 'constituent_of',
+                         'mods': 'mods'
                          }
         self.mt = MT.ModsTransformer()
 
@@ -215,6 +216,8 @@ class MSVUUtilities:
         cleaned_line = {}
         for key, value in line.items():
             if key in map:
+                if value is None:
+                    value = ''
                 if value.strip():
                     cleaned_line[map[key]] = value
 
