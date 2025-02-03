@@ -24,7 +24,7 @@ class MSVUProcessor:
             'islandora:sp-audioCModel': ['OBJ'],
         }
         self.mu = MU.MSVUUtilities()
-        self.ms = MS.MSVUServerUtilities()
+        self.ms = MS.MSVUServerUtilities('msvu')
         self.namespace = namespace
         self.export_dir = '/opt/islandora/msvu_migration'
         self.mimemap = {"image/jpeg": ".jpg",

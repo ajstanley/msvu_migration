@@ -1,11 +1,11 @@
 # Utility class for functions to be run on the server
+import csv
 import shutil
+from pathlib import Path
+from urllib.parse import unquote
 
 import FoxmlWorker as FW
 import MSVUUtilities as MU
-from pathlib import Path
-from urllib.parse import unquote
-import csv
 
 
 class MSVUServerUtilities:
@@ -31,7 +31,6 @@ class MSVUServerUtilities:
                         "video/x-m4v": ".m4v",
                         "audio/vnd.wave": '.wav'
                         }
-
 
     # Retrieves FOXml object store with pid
     def get_foxml_from_pid(self, pid):
@@ -76,7 +75,9 @@ class MSVUServerUtilities:
 
     def stage_files(self, pids, datastreams):
         for pid in pids:
-            nid = self.mu.get_nid_from_pid(pid)
+            nid = self.mu.get_nid_from_pid(self.namespace, pid)
+            if not nid:
+                continue
             fw = self.get_foxml_from_pid(pid)
             all_files = fw.get_file_data()
             for datastream in datastreams:
@@ -88,13 +89,5 @@ class MSVUServerUtilities:
                     shutil.copy(source, destination)
 
 
-
-
-
-
-
 ms = MSVUServerUtilities('MSVU')
 ms.get_all_dc()
-
-
-
