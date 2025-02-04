@@ -294,7 +294,6 @@ class MSVUUtilities:
         for tag, value in tags_and_values:
             tag = re.sub(r"\{.*?\}", "", tag)
             dc_vals[tag] = value
-
         return dc_vals
 
 

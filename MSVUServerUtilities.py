@@ -76,18 +76,17 @@ class MSVUServerUtilities:
     def stage_files(self, pids, datastreams):
         for pid in pids:
             nid = self.mu.get_nid_from_pid(self.namespace, pid)
-            if not nid:
+            if nid == '':
                 continue
             fw = self.get_foxml_from_pid(pid)
             all_files = fw.get_file_data()
             for datastream in datastreams:
                 if datastream in all_files:
-                    file_info = all_files[datastream]['filename']
-                    source = self.mu.dereference(file_info['filename'])
+                    file_info = all_files[datastream]
+                    source = f"{self.datastreamStore}/{self.mu.dereference(file_info['filename'])}"
                     extension = self.mimemap[file_info['mimetype']]
                     destination = f"{self.staging_dir}{nid}_{datastream}{extension}"
                     shutil.copy(source, destination)
 
 
-ms = MSVUServerUtilities('MSVU')
-ms.get_all_dc()
+
