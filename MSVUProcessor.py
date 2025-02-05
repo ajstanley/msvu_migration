@@ -192,15 +192,12 @@ class MSVUProcessor:
                     row['field_member_of'] = node_id
                     writer.writerow(row)
 
-    def stage_collection_thumbnails(self):
-        collections = self.mu.get_collection_details('msvu')
-        collection_pids = [d["field_pid"] for d in collections]
-        self.ms.stage_files(collection_pids, ['TN'])
-
-    def stage_book_images(self):
-        collections = self.mu.get_book_details('msvu')
-        book_pids = [d["field_pid"] for d in collections]
-        self.ms.stage_files(book_pids, ['OBJ'])
+    def stage_by_content_model(self, content_model, datastreams=None):
+        if datastreams is None:
+            datastreams = ['OBJ']
+        details = self.mu.get_details('msvu', f'{content_model}')
+        pids = [d["field_pid"] for d in details]
+        self.ms.stage_files(pids, datastreams)
 
     def build_add_media_worksheet(self):
         with open('inputs/collection_images.txt', 'r') as images:
@@ -210,14 +207,10 @@ class MSVUProcessor:
             writer.writeheader()
             for line in lines:
                 row = {}
-                parts = line.split('_TN')
+                parts = line.split('_OBJ')
                 row['node_id'] = parts[0]
                 row['file'] = line.strip()
                 writer.writerow(row)
 
-
-
-
 MP = MSVUProcessor('msvu')
-
-MP.build_add_media_worksheet()
+MP.stage_by_content_model('sp-audioCModel')

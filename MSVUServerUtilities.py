@@ -85,7 +85,7 @@ class MSVUServerUtilities:
                     file_info = all_files[datastream]
                     source = f"{self.datastreamStore}/{self.mu.dereference(file_info['filename'])}"
                     extension = self.mimemap[file_info['mimetype']]
-                    destination = f"{self.staging_dir}{nid}_{datastream}{extension}"
+                    destination = f"{self.staging_dir}/{nid}_{datastream}{extension}"
                     shutil.copy(source, destination)
 
 

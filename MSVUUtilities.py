@@ -124,54 +124,9 @@ class MSVUUtilities:
             pids.append(row['pid'])
         return pids
 
-    # Get all collection details within namespace
-    def get_collection_details(self, table):
-        command = f"SELECT * from {table} where content_model = 'islandora:collectionCModel'"
-        return self.get_details(command)
-
-    # Get collection member's details.
-    def get_collection_member_details(self, table, collections):
-        collections = f"({', '.join([repr(item) for item in collections])})"
-        command = f"SELECT * FROM {table} WHERE collection_pid IN {collections}"
-        return self.get_details(command)
-
-    # Gets all books in repository
-    def get_book_details(self, table):
-        command = f"Select * from {table} where content_model = 'islandora:bookCModel'"
-        return self.get_details(command)
-
-    # Gets all pages in repository
-    def get_page_details(self, table):
-        command = f"Select * from {table} where content_model = 'islandora:pageCModel'"
-        return self.get_details(command)
-
-    # Gets all documents in repository
-    def get_document_details(self, table):
-        command = f"Select * from {table} where content_model = 'islandora:sp_pdf'"
-        return self.get_details(command)
-
-    # Gets all basic_images in repository
-    def get_basic_image_details(self, table):
-        command = f"Select * from {table} where content_model = 'islandora:sp_basic_image'"
-        return self.get_details(command)
-
-    # Gets all large images in repository
-    def get_large_image_details(self, table):
-        command = f"Select * from {table} where content_model = 'islandora:sp_large_image_cmodel'"
-        return self.get_details(command)
-
-    # Gets all audio in repository
-    def get_audio_details(self, table):
-        command = f"Select * from {table} where content_model = 'islandora:sp-audioCModel'"
-        return self.get_details(command)
-
-    # Gets all audio in repository
-    def get_newspaper_details(self, table):
-        command = f"Select * from {table} where content_model = 'islandora:newspaperIssueCModel'"
-        return self.get_details(command)
-
     # Utility function to prepare database selections for workbenchl
-    def get_details(self, command):
+    def get_details(self, table, content_model):
+        command = f"Select * from {table} where content_model = 'islandora:{content_model}'"
         cursor = self.conn.cursor()
         details = []
         for row in cursor.execute(command):
