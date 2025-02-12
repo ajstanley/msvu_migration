@@ -87,6 +87,9 @@ class MSVUServerUtilities:
                     extension = self.mimemap[file_info['mimetype']]
                     destination = f"{self.staging_dir}/{nid}_{datastream}{extension}"
                     shutil.copy(source, destination)
+                    print(f"{nid} {pid} {destination}")
+                else:
+                    print(f"Datastream not found for {nid}")
 
 
 

@@ -207,10 +207,10 @@ class MSVUProcessor:
             writer.writeheader()
             for line in lines:
                 row = {}
-                parts = line.split('_OBJ')
+                parts = line.split('_FU')
                 row['node_id'] = parts[0]
                 row['file'] = line.strip()
                 writer.writerow(row)
 
 MP = MSVUProcessor('msvu')
-MP.build_add_media_worksheet()
+MP.stage_by_content_model('pageCModel', ['OBJ']);

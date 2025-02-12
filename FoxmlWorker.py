@@ -26,6 +26,7 @@ class FWorker:
     def get_state(self):
         return self.properties['state']
 
+    # Gets all properties.
     def get_properties(self):
         values = {}
         properties = self.root.findall('.//foxml:objectProperties/foxml:property', self.namespaces)
@@ -58,6 +59,7 @@ class FWorker:
                 mapping[stream] = {'filename': location[-1].attrib['REF'], 'mimetype': mimetype}
         return mapping
 
+    # Returns dc stream as XML
     def get_dc(self):
         dc_nodes = self.root.findall(
             f'.//foxml:datastream[@ID="DC"]/foxml:datastreamVersion/foxml:xmlContent/oai_dc:dc',
@@ -65,6 +67,7 @@ class FWorker:
         dc_node = dc_nodes[-1]
         return ET.tostring(dc_node, encoding='unicode')
 
+    # Returns list of Dublin Core key/value pairs.  Allows for mulitples.
     def get_dc_values(self):
         dc_nodes = self.root.findall(f'.//foxml:datastream[@ID="DC"]/foxml:datastreamVersion/foxml:xmlContent',
                                      namespaces=self.namespaces)
@@ -78,7 +81,7 @@ class FWorker:
                     tag = child.xpath('local-name()')
                     dc_values.append({tag: text})
         return dc_values
-
+    # Returns key/value pairs from RELS-EXT.
     def get_rels_ext_values(self):
         re_values = {}
         re_nodes = self.root.findall(
@@ -97,6 +100,7 @@ class FWorker:
                 re_values[tag] = resource.replace('info:fedora/', '')
         return re_values
 
+    # Older Fedora objects may kep mods inline rather than ina separate file in the dataStore.
     def get_inline_mods(self):
         retval = ''
         try:
@@ -118,5 +122,4 @@ class FWorker:
 
 if __name__ == '__main__':
     FW = FWorker('inputs/sample_foxml.xml')
-    print(FW.get_file_data())
-
+    print(FW.get_dc())
