@@ -91,5 +91,32 @@ class MSVUServerUtilities:
                 else:
                     print(f"Datastream not found for {nid}")
 
+    # Builds record directly from objectStore
+    def build_record_from_pids(self, namespace, output_file):
+        pids = self.get_pids_from_objectstore(namespace)
+        headers = ['pid',
+                   'content_model',
+                   'collection_pid',
+                   'page_of',
+                   'sequence',
+                   'constituent_of']
+
+        with open(output_file, 'w', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=headers)
+            writer.writeheader()
+            for pid in pids:
+                foxml_file = self.mu.dereference(pid)
+                foxml = f"{self.objectStore}/{foxml_file}"
+                fw = FW.FWorker(foxml)
+                if fw.get_state() != 'Active':
+                    continue
+                relations = fw.get_rels_ext_values()
+                row = {}
+                row['pid'] = pid
+                for relation, value in relations.items():
+                    if relation in self.mu.rels_map:
+                        row[self.mu.rels_map[relation]] = value
+                writer.writerow(row)
 
 
+MS = MSVUServerUtilities('MSVU')

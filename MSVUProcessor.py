@@ -213,4 +213,4 @@ class MSVUProcessor:
                 writer.writerow(row)
 
 MP = MSVUProcessor('msvu')
-MP.stage_by_content_model('pageCModel', ['OBJ']);
+
