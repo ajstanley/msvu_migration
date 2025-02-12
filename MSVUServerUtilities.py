@@ -107,16 +107,19 @@ class MSVUServerUtilities:
             for pid in pids:
                 foxml_file = self.mu.dereference(pid)
                 foxml = f"{self.objectStore}/{foxml_file}"
-                fw = FW.FWorker(foxml)
-                if fw.get_state() != 'Active':
-                    continue
-                relations = fw.get_rels_ext_values()
-                row = {}
-                row['pid'] = pid
-                for relation, value in relations.items():
-                    if relation in self.mu.rels_map:
-                        row[self.mu.rels_map[relation]] = value
-                writer.writerow(row)
+                if (foxml):
+                    fw = FW.FWorker(foxml)
+                    if fw.get_state() != 'Active':
+                        continue
+                    relations = fw.get_rels_ext_values()
+                    row = {}
+                    row['pid'] = pid
+                    for relation, value in relations.items():
+                        if relation in self.mu.rels_map:
+                            row[self.mu.rels_map[relation]] = value
+                    writer.writerow(row)
+                else:
+                    print(f"FoXML file for {pid} is missing")
 
 
 MS = MSVUServerUtilities('MSVU')
