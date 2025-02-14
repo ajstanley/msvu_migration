@@ -11,10 +11,10 @@ import MSVUUtilities as MU
 class MSVUServerUtilities:
     def __init__(self, namespace):
         self.namespace = namespace
-        self.objectStore = '/home/alan/data/objectStore'
-        self.datastreamStore = '/home/alan/data/datastreamStore'
+        self.objectStore = '/usr/local/fedora/data/objectStore'
+        self.datastreamStore = '/usr/local/fedora/data/datastreamStore'
         self.staging_dir = 'staging'
-        self.mu = MU.MSVUUtilities()
+        self.mu = MU.MSVUUtilities(namespace)
         self.mimemap = {"image/jpeg": ".jpg",
                         "image/jp2": ".jp2",
                         "image/png": ".png",

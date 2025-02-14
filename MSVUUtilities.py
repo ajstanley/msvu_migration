@@ -12,8 +12,8 @@ import ModsTransformer as MT
 
 
 class MSVUUtilities:
-    def __init__(self):
-        self.conn = sqlite3.connect('msvu.db')
+    def __init__(self, namespace):
+        self.conn = sqlite3.connect(f'{namespace}.db')
         self.conn.row_factory = sqlite3.Row
         self.fields = ['PID', 'model', 'RELS_EXT_isMemberOfCollection_uri_ms', 'RELS_EXT_isPageOf_uri_ms']
         self.objectStore = '/usr/local/fedora/data/objectStore/'
