@@ -121,5 +121,28 @@ class MSVUServerUtilities:
                 else:
                     print(f"FoXML file for {pid} is missing")
 
+    # Adds all MODS records from datastreamStore to database
+    def add_mods_to_database(self):
+        cursor = self.mu.conn.cursor()
+        pids = self.get_pids_from_objectstore(self.namespace)
+        for pid in pids:
+            foxml_file = self.mu.dereference(pid)
+            foxml = f"{self.objectStore}/{foxml_file}"
+            fw = FW.FWorker(foxml)
+            if fw.get_state() != 'Active':
+                continue
+            mapping = fw.get_file_data()
+            mods_info = mapping.get('MODS')
+            if mods_info:
+                mods_path = f"{self.datastreamStore}/{self.mu.dereference(mods_info['filename'])}"
+                mods_xml = Path(mods_path).read_text()
+            else:
+                mods_xml = fw.get_inline_mods()
+            if mods_xml:
+                mods_xml = mods_xml.replace("'", "''")
+                command = f"""UPDATE {self.namespace} set mods = '{mods_xml}' where pid = '{pid}'"""
+                cursor.execute(command)
+        self.mu.conn.commit()
+
 
 MS = MSVUServerUtilities('MSVU')
